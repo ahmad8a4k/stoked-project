@@ -1,0 +1,51 @@
+package com.example.db
+
+import com.example.data.tables.productsTabels.*
+import com.example.data.tables.stockTables.SectionsTable
+import org.ktorm.database.Database
+import org.ktorm.entity.sequenceOf
+
+val Database.product
+    get() = this.sequenceOf(ProductTable)
+
+val Database.category
+    get() = this.sequenceOf(CategoryTable)
+
+val Database.color
+    get() = this.sequenceOf(ColorTable)
+
+val Database.productCondition
+    get() = this.sequenceOf(ProductConditionTable)
+
+val Database.productUnit
+    get() = this.sequenceOf(ProductUnitTable)
+
+val Database.stockColor
+    get() = this.sequenceOf(StockColorTable)
+
+val Database.stock
+    get() = this.sequenceOf(StockTable)
+
+val Database.stockWeight
+    get() = this.sequenceOf(StockWeightTable)
+
+val Database.supplier
+    get() = this.sequenceOf(SupplierTable)
+
+val Database.transfers
+    get() = this.sequenceOf(TransfersTable)
+
+val Database.transfersType
+    get() = this.sequenceOf(TransfersTypeTable)
+
+val Database.warehouses
+    get() = this.sequenceOf(WarehousesTable)
+
+val Database.productTransferMovements
+    get() = this.sequenceOf(ProductTransfersMovementTable)
+
+val Database.brands
+    get() = this.sequenceOf(BrandTable)
+
+val Database.sectionApp
+    get() = this.sequenceOf(SectionsTable)
