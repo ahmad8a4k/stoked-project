@@ -1,5 +1,7 @@
 package com.example.db
 
+import com.example.data.tables.authTables.RolesTable
+import com.example.data.tables.authTables.UserTable
 import com.example.data.tables.productsTabels.*
 import com.example.data.tables.stockTables.SectionsTable
 import org.ktorm.database.Database
@@ -49,3 +51,9 @@ val Database.brands
 
 val Database.sectionApp
     get() = this.sequenceOf(SectionsTable)
+
+val Database.user
+    get() = this.sequenceOf(UserTable)
+
+val Database.role
+    get() = this.sequenceOf(RolesTable)

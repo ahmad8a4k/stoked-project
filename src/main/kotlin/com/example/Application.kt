@@ -1,6 +1,6 @@
 package com.example
 
-import com.example.db.configurationDataBase
+import com.example.db.modules.mainModule
 import com.example.token.TokenConfig
 import io.ktor.server.application.*
 import com.example.plugins.*
@@ -9,9 +9,8 @@ import com.example.plugins.routing.productsConfigRouting
 import com.example.plugins.routing.stockAppConfigurationRouting
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
+import org.koin.ktor.plugin.Koin
 import org.ktorm.database.Database
-
-lateinit var dataBase: Database
 
 fun main() {
     embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
@@ -21,6 +20,10 @@ fun main() {
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
+
+    install(Koin) {
+        modules(mainModule)
+    }
 
     val tokenConfig = TokenConfig(
         issuer = "http://127.0.0.1:8080",
@@ -34,6 +37,5 @@ fun Application.module() {
     configureSecurity(tokenConfig)
     configureSerialization()
     configureMonitoring()
-    authConfigRouting(tokenConfig)
-    configurationDataBase()
+    authConfigRouting()
 }

@@ -7,5 +7,5 @@ fun StockColorEntity.toStockColorDto() =
     StockColorDto(
         colorId = colorId,
         stockId = stockId.toStockDto(),
-        quantity= quantity
+        quantity = quantity
     )

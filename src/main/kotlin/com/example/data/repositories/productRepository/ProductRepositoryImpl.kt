@@ -1,7 +1,6 @@
 package com.example.data.repositories.productRepository
 
 import com.example.data.dto.product.*
-import com.example.dataBase
 import com.example.db.*
 import com.example.domin.mapper.*
 import org.ktorm.entity.map
@@ -10,59 +9,73 @@ class ProductRepositoryImpl : ProductRepository {
 
 
     override suspend fun getAllProductsFromStocks(): List<StockDto> {
-        return dataBase.stock.map { it.toStockDto() }
+//        return dataBase.stock.map { it.toStockDto() }
+          TODO("Not yet implemented")
     }
 
     override suspend fun getAllProducts(): List<ProductDto> {
-        return dataBase.product.map { it.toProductDto() }
+//        return dataBase.product.map { it.toProductDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllColors(): List<ColorDto> {
-        return dataBase.color.map { it.toColorDto() }
+//        return dataBase.color.map { it.toColorDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllCategory(): List<CategoryDto> {
-        return dataBase.category.map { it.toCategoryDto() }
+//        return dataBase.category.map { it.toCategoryDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllSupplier(): List<SupplierDto> {
-        return dataBase.supplier.map { it.toSupplerDto() }
+//        return dataBase.supplier.map { it.toSupplerDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllBrands(): List<BrandDto> {
-        return dataBase.brands.map { it.toBrandDto() }
+//        return dataBase.brands.map { it.toBrandDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllTransfers(): List<TransfersDto> {
-        return dataBase.transfers.map { it.toTransfersDto() }
+//        return dataBase.transfers.map { it.toTransfersDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllWarehouses(): List<WarehousesDto> {
-        return dataBase.warehouses.map { it.toWarehousesDto() }
+//        return dataBase.warehouses.map { it.toWarehousesDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllTransfersType(): List<TransfersTypeDto> {
-        return dataBase.transfersType.map { it.toTransfersTypeDto() }
+//        return dataBase.transfersType.map { it.toTransfersTypeDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllProductTransfersMovement(): List<ProductTransfersMovementDto> {
-        return dataBase.productTransferMovements.map { it.toTransferMovementDto() }
+//        return dataBase.productTransferMovements.map { it.toTransferMovementDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllStockWeight(): List<StockWeightDto> {
-        return dataBase.stockWeight.map { it.toStockWeightDto() }
+//        return dataBase.stockWeight.map { it.toStockWeightDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllProductUnits(): List<ProductUnitDto> {
-        return dataBase.productUnit.map { it.toProductUnitDto() }
+//        return dataBase.productUnit.map { it.toProductUnitDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllStockColors(): List<StockColorDto> {
-        return dataBase.stockColor.map { it.toStockColorDto() }
+//        return dataBase.stockColor.map { it.toStockColorDto() }
+        TODO("Not yet implemented")
     }
 
     override suspend fun getAllProductCondition(): List<ProductConditionDto> {
-        return dataBase.productCondition.map { it.toProductConditionDto() }
+//        return dataBase.productCondition.map { it.toProductConditionDto() }
+        TODO("Not yet implemented")
     }
 
     /*

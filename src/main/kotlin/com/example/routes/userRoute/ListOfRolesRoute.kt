@@ -1,4 +1,4 @@
-package com.example.routes.authRoute
+package com.example.routes.userRoute
 
 import com.example.domin.endPoints.AuthenticationEndPoint
 import io.ktor.server.routing.*

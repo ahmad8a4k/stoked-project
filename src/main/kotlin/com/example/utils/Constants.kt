@@ -6,15 +6,5 @@ object Constants {
     const val STOCKED_DATABASE_USER = "root"
     const val STOCKED_DATABASE_PASSWORD = "123456789ahmad"
 
-
-
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
-//    const val  = ""
+    const val SALTED_HASH_ALGORITHM = "SHA1PRNG"
 }

@@ -1,12 +1,13 @@
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
+val koin_version: String by project
 
 plugins {
     application
     kotlin("jvm") version "1.7.10"
     id("io.ktor.plugin") version "2.1.0"
-                id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.10"
 }
 
 group = "com.example"
@@ -40,7 +41,7 @@ dependencies {
 
     // Ktorm Core   KTORM
     implementation("org.ktorm:ktorm-core:3.5.0")
-    implementation ("org.ktorm:ktorm-support-mysql:3.5.0")
+    implementation("org.ktorm:ktorm-support-mysql:3.5.0")
 
     // Mysql Connector
     implementation("mysql:mysql-connector-java:8.0.30")
@@ -58,4 +59,8 @@ dependencies {
     implementation("io.ktor:ktor-server-sessions-jvm:$ktor_version")
 
     implementation("commons-codec:commons-codec:1.15")
+
+    // Koin for Ktor
+    implementation("io.insert-koin:koin-ktor:$koin_version")
+    implementation("io.insert-koin:koin-logger-slf4j:$koin_version")
 }

@@ -11,7 +11,7 @@ fun Application.configureSecurity(config: TokenConfig) {
 
     authentication {
         jwt {
-            realm = "ktor sample app"
+            realm = "Access To Stocked"
             verifier(
                 JWT
                     .require(Algorithm.HMAC256(config.secret))
