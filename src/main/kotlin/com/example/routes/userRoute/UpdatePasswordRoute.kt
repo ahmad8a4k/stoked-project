@@ -1,20 +1,10 @@
 package com.example.routes
 
-import com.example.data.request.auth.UpdateUserPasswordRequest
-import com.example.data.response.AuthResponse
 import com.example.data.repositories.userRepository.UserRepository
 import com.example.security.HashingService
-import com.example.security.SaltedHash
-import com.example.token.Token
 import com.example.token.TokenConfig
 import com.example.token.TokenService
-import com.example.domin.endPoints.AuthenticationEndPoint
-import io.ktor.http.*
-import io.ktor.server.application.*
-import io.ktor.server.request.*
-import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import org.apache.commons.codec.digest.DigestUtils
 
 fun Route.updatePasswordRoute(
     userDataSource: UserRepository,

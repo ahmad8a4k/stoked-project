@@ -8,18 +8,9 @@ class UserRepositoryImpl constructor(
     private var userDao: UserDao,
 ) : UserRepository {
 
-//    override suspend fun getUserByUserName(username: String): UserDto {
-//        return dataBase.from(UserTable).select()
-//            .where { UserTable.userName eq username }.map { row ->
-//                UserDto(
-//                    userId = row[UserTable.userId]!!,
-//                    userRole = row[UserTable.userRole]!!,
-//                    username = row[UserTable.userName]!!,
-//                    userPassword = row[UserTable.userPassword]!!,
-//                    userSalt = row[UserTable.userSalt]!!
-//                )
-//            }.single()
-//    }
+    override suspend fun getUserByUserName(username: String): UserDto? {
+        return userDao.getUserByUserName(userName = username)
+    }
 //
 //    override suspend fun getListOfRolesName(): List<RoleDto> {
 //        return dataBase.from(RolesTable).select()

@@ -2,7 +2,7 @@ package com.example.routes.userRoute
 
 import com.example.data.request.auth.UserRegisterRequest
 import com.example.data.response.AuthResponse
-import com.example.domin.endPoints.AuthenticationEndPoint
+import com.example.domin.endPoints.UserEndPoint
 import com.example.data.repositories.userRepository.UserRepository
 import com.example.security.HashingService
 import io.ktor.http.*
@@ -15,7 +15,7 @@ fun Route.deleteUserRoute(
     userDataSource: UserRepository,
     hashingService: HashingService,
 ) {
-    post(AuthenticationEndPoint.DeleteUserByUsernameAndPassword.path) {
+    post(UserEndPoint.DeleteUserByUsernameAndPassword.path) {
 
         val request = call.receiveOrNull<UserRegisterRequest>() ?: kotlin.run {
             call.respond(HttpStatusCode.BadRequest)

@@ -1,10 +1,10 @@
 package com.example.routes.userRoute
 
-import com.example.domin.endPoints.AuthenticationEndPoint
+import com.example.domin.endPoints.UserEndPoint
 import io.ktor.server.routing.*
 
 fun Route.listOfRoles(){
-    post(AuthenticationEndPoint.ListOfRoles.path) {
+    post(UserEndPoint.ListOfRoles.path) {
 
 
 

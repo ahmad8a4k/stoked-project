@@ -1,4 +1,4 @@
-package com.example.routes.mapper
+package com.example.routes.mapper.signupMapper
 
 import com.example.data.dto.user.UserDto
 import com.example.data.request.auth.UserRegisterRequest

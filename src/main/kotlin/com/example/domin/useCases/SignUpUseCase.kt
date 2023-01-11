@@ -26,6 +26,8 @@ class SignUpUseCase constructor(
                     as BaseResponse<UserDto>
         }
 
+        userRepository.insertUser(user = user)
+
         return BaseResponse.SuccessResponse(
             message = ResponseMessages.SuccessSignup.message, data = true) as
                 BaseResponse<UserDto>

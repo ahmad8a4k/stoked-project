@@ -12,4 +12,6 @@ interface UserDao {
 
     suspend fun checkIfUserExistByName(username: String): Boolean
 
+    suspend fun getUserByUserName(userName: String): UserDto?
+
 }

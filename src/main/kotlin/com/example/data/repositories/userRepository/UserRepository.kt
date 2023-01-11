@@ -19,4 +19,5 @@ interface UserRepository {
 //    suspend fun updateUserPassword(user: UserDto): Boolean
 
     suspend fun deleteUser(username: String): Boolean
+    suspend fun getUserByUserName(username: String): UserDto?
 }

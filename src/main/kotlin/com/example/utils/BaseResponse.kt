@@ -1,6 +1,7 @@
 package com.example.utils
 
 import com.example.data.response.MessageResponse
+import com.example.token.Token
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
 import io.ktor.http.*
@@ -39,8 +40,8 @@ sealed class BaseResponse<T>(@JsonIgnore open val statuesCode: HttpStatusCode) {
     @JsonSerialize
     data class SuccessSignResponse<T>(
         val status: Boolean = true,
-        val data: Boolean? = true,
-        val message: String = "",
+        val data: String ?="",
+        val message: String = ResponseMessages.SuccessSignIn.message,
         @JsonIgnore
         val statusCode: HttpStatusCode = HttpStatusCode.OK,
     ) : BaseResponse<T>(statusCode)

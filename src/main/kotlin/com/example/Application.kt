@@ -4,13 +4,12 @@ import com.example.db.modules.mainModule
 import com.example.token.TokenConfig
 import io.ktor.server.application.*
 import com.example.plugins.*
-import com.example.plugins.routing.authConfigRouting
+import com.example.plugins.routing.userConfigRouting
 import com.example.plugins.routing.productsConfigRouting
 import com.example.plugins.routing.stockAppConfigurationRouting
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 import org.koin.ktor.plugin.Koin
-import org.ktorm.database.Database
 
 fun main() {
     embeddedServer(Netty, port = 8080, host = "127.0.0.1") {
@@ -37,5 +36,7 @@ fun Application.module() {
     configureSecurity(tokenConfig)
     configureSerialization()
     configureMonitoring()
-    authConfigRouting()
+    userConfigRouting()
 }
+
+
